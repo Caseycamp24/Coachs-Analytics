@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coach's Analytics — Action-Oriented Basketball Defense</title>
+<title>Coach's Analytics: Action-Oriented Basketball Defense</title>
 <style>
   :root {
     --black: #000000;
@@ -151,7 +151,7 @@
   .live-stat-label { font-size:11px; color:var(--t-dark2); margin-top:2px; }
   .seq-insight { margin-top:16px; padding:14px 16px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-sm); font-size:13px; color:var(--t-dark2); line-height:1.6; min-height:60px; transition:all .3s; }
 
-  /* FEATURES GRID — on dark */
+  /* FEATURES GRID (on dark) */
   .feature-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
   .feature-card-dark { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:24px; transition:all .3s; }
   .feature-card-dark:hover { border-color:rgba(255,255,255,0.25); background:rgba(255,255,255,0.06); transform:translateY(-2px); }
@@ -362,7 +362,7 @@
       <div class="comp-card">
         <div class="comp-label">Traditional Analytics</div>
         <div class="comp-stat">108.4</div>
-        <div class="comp-desc">Defensive Efficiency. Useful for rankings — not for a halftime speech.</div>
+        <div class="comp-desc">Defensive Efficiency. Useful for rankings, not for a halftime speech.</div>
       </div>
       <div class="comp-arrow">&#8594;</div>
       <div class="comp-card new">
@@ -424,8 +424,8 @@
   function cr(r){ return r * sx; }
 
   // Court key measurements (in court units)
-  const LB = { x:45, y:250 };  // left basket — 4.5ft from baseline (NBA spec)
-  const RB = { x:895, y:250 }; // right basket — 4.5ft from baseline (NBA spec)
+  const LB = { x:45, y:250 };  // left basket, 4.5ft from baseline (NBA spec)
+  const RB = { x:895, y:250 }; // right basket, 4.5ft from baseline (NBA spec)
   const BW = 5; // border
 
   function drawCourt(){
@@ -530,21 +530,21 @@
       {x1:340,y1:200, x2:210,y2:370, type:'pass'},
       {x1:210,y1:370, x2:LB.x,y2:LB.y, type:'shot'},
     ], result:'miss' },
-    // Attacking RIGHT — quick drive
+    // Attacking RIGHT, quick drive
     { basket: RB, segs: [
       {x1:240,y1:280, x2:380,y2:250, type:'pass'},
       {x1:380,y1:250, x2:520,y2:240, type:'drive'},
       {x1:520,y1:240, x2:680,y2:150, type:'pass'},
       {x1:680,y1:150, x2:RB.x,y2:RB.y, type:'shot'},
     ], result:'made' },
-    // Attacking LEFT — wing drive kick
+    // Attacking LEFT, wing drive kick
     { basket: LB, segs: [
       {x1:700,y1:160, x2:560,y2:180, type:'pass'},
       {x1:560,y1:180, x2:420,y2:250, type:'drive'},
       {x1:420,y1:250, x2:260,y2:140, type:'pass'},
       {x1:260,y1:140, x2:LB.x,y2:LB.y, type:'shot'},
     ], result:'miss' },
-    // Attacking RIGHT — ball movement
+    // Attacking RIGHT, ball movement
     { basket: RB, segs: [
       {x1:160,y1:200, x2:300,y2:150, type:'pass'},
       {x1:300,y1:150, x2:450,y2:160, type:'pass'},
@@ -679,7 +679,7 @@
         if(segProg>=1){
           segProg=0; segIdx++;
           if(segIdx>=poss.segs.length){
-            // Possession ended — flash and pause
+            // Possession ended, flash and pause
             flashAlpha=1; flashGood=poss.result==='made';
             pauseFrames=55;
           }
@@ -707,7 +707,7 @@
 <div id="demo" class="section-dark2">
   <section style="padding-bottom:40px">
     <span class="section-tag-dark">Interactive Demo</span>
-    <h2 class="dark">Click the court — see the analytics</h2>
+    <h2 class="dark">Click the court: see the analytics</h2>
     <p class="section-sub-dark">Every zone feeds specific analytics. Tap a zone to see what's tracked, sample data, and the coaching cue it generates.</p>
   </section>
   <div class="demo-layout" style="max-width:1100px;margin:0 auto;padding:0 20px 60px">
@@ -762,7 +762,7 @@
         <!-- Paint: 16ft wide × 19ft deep (x=170–330, y=280–470) -->
         <rect x="170" y="280" width="160" height="190" fill="none" stroke="white" stroke-width="2"/>
 
-        <!-- Lane blocks — left side outside paint (x=158–170), 6 marks at NBA distances from baseline -->
+        <!-- Lane blocks left side outside paint (x=158-170), 6 marks at NBA distances from baseline -->
         <line x1="158" y1="310" x2="170" y2="310" stroke="white" stroke-width="1.5"/>
         <line x1="158" y1="320" x2="170" y2="320" stroke="white" stroke-width="1.5"/>
         <line x1="158" y1="350" x2="170" y2="350" stroke="white" stroke-width="1.5"/>
@@ -770,7 +770,7 @@
         <line x1="158" y1="390" x2="170" y2="390" stroke="white" stroke-width="1.5"/>
         <line x1="158" y1="400" x2="170" y2="400" stroke="white" stroke-width="1.5"/>
 
-        <!-- Lane blocks — right side (x=330–342) -->
+        <!-- Lane blocks right side (x=330-342) -->
         <line x1="330" y1="310" x2="342" y2="310" stroke="white" stroke-width="1.5"/>
         <line x1="330" y1="320" x2="342" y2="320" stroke="white" stroke-width="1.5"/>
         <line x1="330" y1="350" x2="342" y2="350" stroke="white" stroke-width="1.5"/>
@@ -778,9 +778,9 @@
         <line x1="330" y1="390" x2="342" y2="390" stroke="white" stroke-width="1.5"/>
         <line x1="330" y1="400" x2="342" y2="400" stroke="white" stroke-width="1.5"/>
 
-        <!-- Free throw circle: r=6ft=60px, center=(250,280) — solid upper half -->
+        <!-- Free throw circle: r=6ft=60px, center=(250,280), solid upper half -->
         <path d="M 190 280 A 60 60 0 0 1 310 280" fill="none" stroke="white" stroke-width="2"/>
-        <!-- Free throw circle — dashed lower half (into paint) -->
+        <!-- Free throw circle, dashed lower half (into paint) -->
         <path d="M 310 280 A 60 60 0 0 1 190 280" fill="none" stroke="white" stroke-width="2" stroke-dasharray="6,4"/>
 
         <!-- Three-point line: left corner (3ft from sideline = x=30), baseline to arc junction y=334 -->
@@ -818,7 +818,7 @@
       <div class="demo-zone-info" id="zoneInfo">
         <div class="dzi-zone">SELECT A ZONE</div>
         <div class="dzi-title">Explore the Court</div>
-        <p style="color:var(--t-dark2);font-size:13px;margin-top:8px;line-height:1.6">Every zone feeds targeted analytics. Paint touches, drive origins, shot locations, and pass destinations are all captured with a single tap — no video, no calibration.</p>
+        <p style="color:var(--t-dark2);font-size:13px;margin-top:8px;line-height:1.6">Every zone feeds targeted analytics. Paint touches, drive origins, shot locations, and pass destinations are all captured with a single tap. No video, no calibration.</p>
         <div style="margin-top:16px">
           <div style="font-size:11px;color:var(--t-dark3);margin-bottom:8px;letter-spacing:1px;text-transform:uppercase">TRACKED PER ZONE:</div>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -844,7 +844,7 @@
     <p class="section-sub-dark">Each defensive possession is a sequence of court taps. Press Play to see how one possession feeds six analytic modules simultaneously.</p>
     <div class="seq-wrap">
       <div class="seq-header">
-        <div class="seq-title">Possession #14 — Q3 · Set Play · 18 seconds</div>
+        <div class="seq-title">Possession #14 | Q3 · Set Play · 18 seconds</div>
         <div style="display:flex;gap:10px">
           <button class="btn-sm reset" onclick="resetSeq()">Reset</button>
           <button class="btn-sm play" id="playBtn" onclick="playSeq()">Play</button>
@@ -852,22 +852,22 @@
       </div>
       <div class="seq-body">
         <div class="seq-timeline" id="seqTimeline">
-          <div class="seq-step" id="step0"><div class="step-dot">1</div><div class="step-text"><div class="step-label">Pass — Right Wing</div><div class="step-sub">Pass flow arc logged. Origin tracked.</div></div></div>
-          <div class="seq-step" id="step1"><div class="step-dot">2</div><div class="step-text"><div class="step-label">Dribble Drive — 3.2s</div><div class="step-sub">Right wing into paint. Duration bucket: 2–5s.</div></div></div>
+          <div class="seq-step" id="step0"><div class="step-dot">1</div><div class="step-text"><div class="step-label">Pass: Right Wing</div><div class="step-sub">Pass flow arc logged. Origin tracked.</div></div></div>
+          <div class="seq-step" id="step1"><div class="step-dot">2</div><div class="step-text"><div class="step-label">Dribble Drive: 3.2s</div><div class="step-sub">Right wing into paint. Duration bucket: 2–5s.</div></div></div>
           <div class="seq-step" id="step2"><div class="step-dot">3</div><div class="step-text"><div class="step-label">Paint Touch</div><div class="step-sub">Endpoint in paint. Conversion clock starts.</div></div></div>
-          <div class="seq-step" id="step3"><div class="step-dot">4</div><div class="step-text"><div class="step-label">Pass — Left Corner (2 after PT)</div><div class="step-sub">Kick-out. Pass flow arc added. Rotation window.</div></div></div>
-          <div class="seq-step" id="step4"><div class="step-dot">5</div><div class="step-text"><div class="step-label">Shot — Left Corner 3 (C&S)</div><div class="step-sub">Catch-and-shoot. Defender close-out grade logged.</div></div></div>
-          <div class="seq-step" id="step5"><div class="step-dot">M</div><div class="step-text"><div class="step-label">Made — Sequence Ends</div><div class="step-sub">3 pts. All six modules updated.</div></div></div>
+          <div class="seq-step" id="step3"><div class="step-dot">4</div><div class="step-text"><div class="step-label">Pass: Left Corner (2 after PT)</div><div class="step-sub">Kick-out. Pass flow arc added. Rotation window.</div></div></div>
+          <div class="seq-step" id="step4"><div class="step-dot">5</div><div class="step-text"><div class="step-label">Shot: Left Corner 3 (C&S)</div><div class="step-sub">Catch-and-shoot. Defender close-out grade logged.</div></div></div>
+          <div class="seq-step" id="step5"><div class="step-dot">M</div><div class="step-text"><div class="step-label">Made: Sequence Ends</div><div class="step-sub">3 pts. All six modules updated.</div></div></div>
         </div>
         <div class="seq-stats">
           <div class="seq-stats-title">Analytics Updated Live</div>
           <div class="live-stats-grid">
-            <div class="live-stat" id="lstat0"><div class="live-stat-val" id="lv0">—</div><div class="live-stat-label">Pass flow arcs</div></div>
-            <div class="live-stat" id="lstat1"><div class="live-stat-val" id="lv1">—</div><div class="live-stat-label">Drive count</div></div>
-            <div class="live-stat" id="lstat2"><div class="live-stat-val" id="lv2">—</div><div class="live-stat-label">Paint touches</div></div>
-            <div class="live-stat" id="lstat3"><div class="live-stat-val" id="lv3">—</div><div class="live-stat-label">Passes after PT</div></div>
-            <div class="live-stat" id="lstat4"><div class="live-stat-val" id="lv4">—</div><div class="live-stat-label">C&S shots</div></div>
-            <div class="live-stat" id="lstat5"><div class="live-stat-val" id="lv5">—</div><div class="live-stat-label">Points allowed</div></div>
+            <div class="live-stat" id="lstat0"><div class="live-stat-val" id="lv0">-</div><div class="live-stat-label">Pass flow arcs</div></div>
+            <div class="live-stat" id="lstat1"><div class="live-stat-val" id="lv1">-</div><div class="live-stat-label">Drive count</div></div>
+            <div class="live-stat" id="lstat2"><div class="live-stat-val" id="lv2">-</div><div class="live-stat-label">Paint touches</div></div>
+            <div class="live-stat" id="lstat3"><div class="live-stat-val" id="lv3">-</div><div class="live-stat-label">Passes after PT</div></div>
+            <div class="live-stat" id="lstat4"><div class="live-stat-val" id="lv4">-</div><div class="live-stat-label">C&S shots</div></div>
+            <div class="live-stat" id="lstat5"><div class="live-stat-val" id="lv5">-</div><div class="live-stat-label">Points allowed</div></div>
           </div>
           <div class="seq-insight" id="seqInsight">Press Play to watch the possession unfold and see how each tap updates your defensive analytics in real time.</div>
         </div>
@@ -896,11 +896,11 @@
     <div class="grade-detail" id="gradeDetail">
       <div class="grade-detail-label">CLICK A GRADE TO SEE WHAT IT MEANS IN GAME</div>
       <div class="grade-detail-title">Close-Out Grade Scale</div>
-      <div class="grade-detail-desc">Coach's Analytics grades every close-out defender makes in real time. Averaged per player, per quarter, and per matchup — these grades tell you exactly who is executing your defensive scheme and who isn't.</div>
+      <div class="grade-detail-desc">Coach's Analytics grades every close-out defender makes in real time. Averaged per player, per quarter, and per matchup. These grades tell you exactly who is executing your defensive scheme and who isn't.</div>
     </div>
 
     <div style="margin-top:40px">
-      <div style="font-size:13px;font-weight:700;color:var(--t-light3);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px">SAMPLE PLAYER CLOSE-OUT REPORT — Q3</div>
+      <div style="font-size:13px;font-weight:700;color:var(--t-light3);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px">SAMPLE PLAYER CLOSE-OUT REPORT: Q3</div>
       <div style="overflow-x:auto">
         <table style="width:100%;border-collapse:collapse;font-size:13px">
           <thead>
@@ -928,7 +928,7 @@
               <td style="padding:12px 14px;text-align:center;font-weight:800;color:#16a34a">4.2</td>
               <td style="padding:12px 14px;text-align:center">4</td>
               <td style="padding:12px 14px;text-align:center;font-weight:700;color:#16a34a">36%</td>
-              <td style="padding:12px 14px;color:var(--t-light2)">Elite close-out timing. Staying at one step — exactly right.</td>
+              <td style="padding:12px 14px;color:var(--t-light2)">Elite close-out timing. Staying at one step. Exactly right.</td>
             </tr>
             <tr style="border-bottom:1px solid var(--light2)">
               <td style="padding:12px 14px;font-weight:700;color:black">#11 Jordan</td>
@@ -952,11 +952,11 @@
   <section>
     <span class="section-tag-dark">Opponent Play Recognition</span>
     <h2 class="dark">Recognize their plays. Grade your response.</h2>
-    <p class="section-sub-dark">Coach's Analytics detects recurring action sequences automatically — no manual tagging. When the same pattern runs 10+ times in a game, it surfaces as a named play with a stop rate. You can then grade how well your team executed the called defense.</p>
+    <p class="section-sub-dark">Coach's Analytics detects recurring action sequences automatically, no manual tagging. When the same pattern runs 10+ times in a game, it surfaces as a named play with a stop rate. You can then grade how well your team executed the called defense.</p>
 
     <div style="display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start">
       <div style="flex:1;min-width:280px">
-        <div style="font-size:12px;color:var(--t-dark3);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px">DETECTED PATTERNS — GAME VS LINCOLN H.S.</div>
+        <div style="font-size:12px;color:var(--t-dark3);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px">DETECTED PATTERNS: GAME VS LINCOLN H.S.</div>
         <div class="opp-pattern-list" id="patternList">
           <div class="opp-pattern recognized" onclick="selectPattern(this,'pass-drive-kick')">
             <div>
@@ -1016,7 +1016,7 @@
         <div id="patternDetail" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:24px;min-height:320px">
           <div style="font-size:11px;color:var(--t-dark3);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">SELECT A PATTERN</div>
           <div style="font-size:18px;font-weight:800;color:white;margin-bottom:12px">Opponent Play Recognition</div>
-          <p style="font-size:13px;color:var(--t-dark2);line-height:1.6">Click a pattern to see its breakdown — rep count, stop rate by quarter, and defensive execution grading. Grade A–D to build your film session notes automatically.</p>
+          <p style="font-size:13px;color:var(--t-dark2);line-height:1.6">Click a pattern to see its breakdown: rep count, stop rate by quarter, and defensive execution grading. Grade A–D to build your film session notes automatically.</p>
         </div>
       </div>
     </div>
@@ -1030,7 +1030,7 @@
   <section>
     <span class="section-tag-light">Pre-Game Scheme Integration</span>
     <h2 class="light">Build your scheme. Track it in real time.</h2>
-    <p class="section-sub-light">Before tip-off, load your defensive assignments and expected opponent tendencies. During the game, Coach's Analytics monitors whether your scheme is being executed — and flags breakdowns before they become a run.</p>
+    <p class="section-sub-light">Before tip-off, load your defensive assignments and expected opponent tendencies. During the game, Coach's Analytics monitors whether your scheme is being executed and flags breakdowns before they become a run.</p>
 
     <div class="scheme-layout">
       <div class="scheme-panel">
@@ -1049,7 +1049,7 @@
         </div>
       </div>
       <div class="scheme-panel">
-        <div style="font-size:12px;color:var(--t-light3);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px">LIVE SCHEME ADHERENCE — Q3</div>
+        <div style="font-size:12px;color:var(--t-light3);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px">LIVE SCHEME ADHERENCE: Q3</div>
         <div class="scheme-live">
           <div class="sl-header"><div class="sl-dot"></div><div class="sl-title">Tracking vs. Pre-Game Plan</div></div>
           <div class="sl-item">
@@ -1059,7 +1059,7 @@
           </div>
           <div class="sl-item">
             <div class="sl-check">&#9989;</div>
-            <div class="sl-text">Corner 3 attempts: 14 allowed — within scheme expectation</div>
+            <div class="sl-text">Corner 3 attempts: 14 allowed, within scheme expectation</div>
             <div class="sl-status ok">ON PLAN</div>
           </div>
           <div class="sl-item">
@@ -1069,7 +1069,7 @@
           </div>
           <div class="sl-item">
             <div class="sl-check">&#9989;</div>
-            <div class="sl-text">Paint touches per possession: 0.72 — target was &lt;0.5</div>
+            <div class="sl-text">Paint touches per possession: 0.72, target was &lt;0.5</div>
             <div class="sl-status warn">HIGH</div>
           </div>
           <div class="sl-item">
@@ -1133,9 +1133,9 @@
       </div>
       <div class="pane-text">
         <ul class="pane-insight-list">
-          <li><strong>Right baseline is a crisis.</strong> 71% — one stop in three. Help rotation isn't loading that side.</li>
-          <li><strong>Left wing is a vulnerability.</strong> 54% — help arriving a beat late after the first dribble.</li>
-          <li><strong>Top-of-key drives are defended well.</strong> 29% — don't adjust what's working.</li>
+          <li><strong>Right baseline is a crisis.</strong> 71%: one stop in three. Help rotation isn't loading that side.</li>
+          <li><strong>Left wing is a vulnerability.</strong> 54%: help arriving a beat late after the first dribble.</li>
+          <li><strong>Top-of-key drives are defended well.</strong> 29%: don't adjust what's working.</li>
         </ul>
         <div class="dzi-cue-d"><strong>COACHING CUE</strong>"Weak-side wing drops two steps into the paint on #4's first baseline dribble. You're giving up the baseline and the roller simultaneously."</div>
       </div>
@@ -1148,10 +1148,10 @@
           <div class="pane-kpi"><div class="pane-kpi-val">34</div><div class="pane-kpi-label">Total PTs</div></div>
         </div>
         <div>
-          <div class="bar-row"><div class="bar-label">0 passes</div><div class="bar-track"><div class="bar-fill" style="width:26%;background:#dc2626">26% — instant score</div></div></div>
-          <div class="bar-row"><div class="bar-label">1 pass</div><div class="bar-track"><div class="bar-fill" style="width:32%;background:#d97706">32% — most common</div></div></div>
+          <div class="bar-row"><div class="bar-label">0 passes</div><div class="bar-track"><div class="bar-fill" style="width:26%;background:#dc2626">26%: instant score</div></div></div>
+          <div class="bar-row"><div class="bar-label">1 pass</div><div class="bar-track"><div class="bar-fill" style="width:32%;background:#d97706">32%: most common</div></div></div>
           <div class="bar-row"><div class="bar-label">2 passes</div><div class="bar-track"><div class="bar-fill" style="width:24%;background:#2563eb">24%</div></div></div>
-          <div class="bar-row"><div class="bar-label">3+ passes</div><div class="bar-track"><div class="bar-fill" style="width:18%;background:#16a34a">18% — defense recovers</div></div></div>
+          <div class="bar-row"><div class="bar-label">3+ passes</div><div class="bar-track"><div class="bar-fill" style="width:18%;background:#16a34a">18%: defense recovers</div></div></div>
         </div>
       </div>
       <div class="pane-text">
@@ -1159,7 +1159,7 @@
           <li><strong>The kick-out window is one pass wide.</strong> Most scores come on the catch after the first kick-out. Help defenders must sprint back on the <em>pass</em>, not the catch.</li>
           <li><strong>3+ passes = stop.</strong> When the defense forces a second rotation, they hold. Communication is the issue, not athleticism.</li>
         </ul>
-        <div class="dzi-cue-d"><strong>COACHING CUE</strong>"When the ball hits the paint — nearest perimeter defender: two steps toward your man NOW. Not on the kick-out. You have a half-second."</div>
+        <div class="dzi-cue-d"><strong>COACHING CUE</strong>"When the ball hits the paint, nearest perimeter defender: two steps toward your man NOW. Not on the kick-out. You have a half-second."</div>
       </div>
     </div>
     <div class="analytics-pane" id="pane-shots">
@@ -1170,17 +1170,17 @@
           <div class="pane-kpi"><div class="pane-kpi-val" style="color:#fbbf24">62%</div><div class="pane-kpi-label">Paint FG%</div></div>
         </div>
         <div>
-          <div class="bar-row"><div class="bar-label">L Corner C&S</div><div class="bar-track"><div class="bar-fill" style="width:64%;background:#dc2626">9/14 — 64%</div></div></div>
-          <div class="bar-row"><div class="bar-label">R Corner C&S</div><div class="bar-track"><div class="bar-fill" style="width:54%;background:#d97706">7/13 — 54%</div></div></div>
-          <div class="bar-row"><div class="bar-label">L Wing C&S</div><div class="bar-track"><div class="bar-fill" style="width:43%;background:#d97706">6/14 — 43%</div></div></div>
-          <div class="bar-row"><div class="bar-label">R Wing C&S</div><div class="bar-track"><div class="bar-fill" style="width:33%;background:#16a34a">5/15 — 33%</div></div></div>
-          <div class="bar-row"><div class="bar-label">Above Break</div><div class="bar-track"><div class="bar-fill" style="width:27%;background:#16a34a">3/11 — 27%</div></div></div>
+          <div class="bar-row"><div class="bar-label">L Corner C&S</div><div class="bar-track"><div class="bar-fill" style="width:64%;background:#dc2626">9/14 (64%)</div></div></div>
+          <div class="bar-row"><div class="bar-label">R Corner C&S</div><div class="bar-track"><div class="bar-fill" style="width:54%;background:#d97706">7/13 (54%)</div></div></div>
+          <div class="bar-row"><div class="bar-label">L Wing C&S</div><div class="bar-track"><div class="bar-fill" style="width:43%;background:#d97706">6/14 (43%)</div></div></div>
+          <div class="bar-row"><div class="bar-label">R Wing C&S</div><div class="bar-track"><div class="bar-fill" style="width:33%;background:#16a34a">5/15 (33%)</div></div></div>
+          <div class="bar-row"><div class="bar-label">Above Break</div><div class="bar-track"><div class="bar-fill" style="width:27%;background:#16a34a">3/11 (27%)</div></div></div>
         </div>
       </div>
       <div class="pane-text">
         <ul class="pane-insight-list">
           <li><strong>Left corner is a heat zone at 64%.</strong> They're running corner cuts specifically to find this spot. Deny on rotations.</li>
-          <li><strong>Off-dribble 3s are not a threat.</strong> 34% — let them create. Your energy goes to contested close-outs on shooters off screens.</li>
+          <li><strong>Off-dribble 3s are not a threat.</strong> 34%. Let them create. Your energy goes to contested close-outs on shooters off screens.</li>
         </ul>
         <div class="dzi-cue-d"><strong>COACHING CUE</strong>"Left corner stays on a string when the ball hits the paint. You don't help unless the drive is at the rim. 9 of our 14 corner 3s conceded came from that spot."</div>
       </div>
@@ -1208,7 +1208,7 @@
       <div class="pane-text">
         <ul class="pane-insight-list">
           <li><strong>Pass→drive→kick is your primary problem.</strong> 31% stop on their most common play is a scheme issue, not an effort issue.</li>
-          <li><strong>Their passing game is stoppable.</strong> 67% stop when they run 3+ passes — you have the personnel.</li>
+          <li><strong>Their passing game is stoppable.</strong> 67% stop when they run 3+ passes. You have the personnel.</li>
         </ul>
         <div class="dzi-cue-d"><strong>COACHING CUE</strong>"Their number-one play is pass-drive-kick. We're tagging every rep in the film session. They need to recognize it mid-game, not just in walkthrough."</div>
       </div>
@@ -1228,10 +1228,10 @@
       </div>
       <div class="pane-text">
         <ul class="pane-insight-list">
-          <li><strong>The first kick-out is the money pass.</strong> 38% stop — help defenders are leaving the corner shooter wide open.</li>
+          <li><strong>The first kick-out is the money pass.</strong> 38% stop. Help defenders are leaving the corner shooter wide open.</li>
           <li><strong>Force a second pass.</strong> Stop rate jumps from 38% to 61% after pass 2. Every extra pass buys a rotation step.</li>
         </ul>
-        <div class="dzi-cue-d"><strong>COACHING CUE</strong>"Corners: one step toward the paint and freeze. Your man is getting the ball first — you need to be recovering to him on the pass, not sprinting from the paint."</div>
+        <div class="dzi-cue-d"><strong>COACHING CUE</strong>"Corners: one step toward the paint and freeze. Your man is getting the ball first. You need to be recovering to him on the pass, not sprinting from the paint."</div>
       </div>
     </div>
   </section>
@@ -1253,7 +1253,7 @@
           <div class="pc-stat-row"><span class="pc-stat-key">FG% allowed</span><span class="pc-stat-val" style="color:#dc2626">61%</span></div>
           <div class="pc-stat-row"><span class="pc-stat-key">Avg close-out grade</span><span class="pc-stat-val" style="color:#d97706">2.1 / 5</span></div>
           <div class="pc-stat-row"><span class="pc-stat-key">Points allowed</span><span class="pc-stat-val">24</span></div>
-          <div class="pc-cue-box"><div class="pc-cue-title">Analytics → Coaching Staff → Player</div>Marcus is being targeted because his close-out grade averages 2.1. 12 of his 18 shots were C&S from rotation. He's not losing off the dribble — he's giving up the corner 3 when he goes too far on help.<br><br><strong style="color:black">Tell Marcus:</strong> "Take one step toward the paint on drive help — not two. Your corner is getting open because you're going all the way. Half-step. Then recover immediately."</div>
+          <div class="pc-cue-box"><div class="pc-cue-title">Analytics → Coaching Staff → Player</div>Marcus is being targeted because his close-out grade averages 2.1. 12 of his 18 shots were C&S from rotation. He's not losing off the dribble. He's giving up the corner 3 when he goes too far on help.<br><br><strong style="color:black">Tell Marcus:</strong> "Take one step toward the paint on drive help, not two. Your corner is getting open because you're going all the way. Half-step. Then recover immediately."</div>
         </div>
       </div>
       <div class="player-card" onclick="togglePlayer(this)">
@@ -1273,7 +1273,7 @@
           <div class="pc-stat-row"><span class="pc-stat-key">FG% allowed</span><span class="pc-stat-val" style="color:#dc2626">78%</span></div>
           <div class="pc-stat-row"><span class="pc-stat-key">Avg close-out grade</span><span class="pc-stat-val" style="color:#d97706">2.8 / 5</span></div>
           <div class="pc-stat-row"><span class="pc-stat-key">Points allowed</span><span class="pc-stat-val">28</span></div>
-          <div class="pc-cue-box"><div class="pc-cue-title">Analytics → Coaching Staff → Player</div>78% FG on 9 possessions — almost everything is scoring. 7 of 9 shots were in the paint. He's retreating on drop coverage instead of anchoring. Positioning, not effort.<br><br><strong style="color:black">Tell Trevon:</strong> "You're dropping too deep on every drive. Anchor at the lane line — feet planted before the ball gets there. Right now you're retreating to the rim. That has to stop."</div>
+          <div class="pc-cue-box"><div class="pc-cue-title">Analytics → Coaching Staff → Player</div>78% FG on 9 possessions. Almost everything is scoring. 7 of 9 shots were in the paint. He's retreating on drop coverage instead of anchoring. Positioning, not effort.<br><br><strong style="color:black">Tell Trevon:</strong> "You're dropping too deep on every drive. Anchor at the lane line, feet planted before the ball gets there. Right now you're retreating to the rim. That has to stop."</div>
         </div>
       </div>
     </div>
@@ -1289,10 +1289,10 @@
     <h2 class="dark">Data → Staff → Floor</h2>
     <p class="section-sub-dark">The entire platform is built around one principle: every number must become a sentence a player can act on immediately.</p>
     <div class="comm-grid">
-      <div class="comm-card"><div class="comm-from"><strong>Analytics Staff Sees</strong>Drive conv. right baseline: 71% (10 drives, 7 scores). Help rotation: 1.2 dribbles late.</div><div class="comm-to"><strong>Coaching Staff Hears</strong>"The right baseline is our biggest problem. #4 is getting to the rim before help arrives. We need a scheme call — not a motivation speech."</div></div>
-      <div class="comm-card"><div class="comm-from"><strong>Analytics Staff Sees</strong>Close-out grade #3 Marcus: 2.1 avg on 12 C&S possessions. Close-out distance at shot: 4.2 feet.</div><div class="comm-to"><strong>Player Hears</strong>"Marcus, you're giving up the corner 3 on rotation. One step in, then back. Your grade is 2.1 — the data shows you're going too far into the paint before recovering."</div></div>
-      <div class="comm-card"><div class="comm-from"><strong>Analytics Staff Sees</strong>N-gram: pass→drive→kick runs 34% of possessions. Stop rate: 31%. 22 occurrences — statistically dominant.</div><div class="comm-to"><strong>Coaching Staff Hears</strong>"This is their primary set. We're stopping it under a third of the time. It needs a specific defensive call with a name your players recognize."</div></div>
-      <div class="comm-card"><div class="comm-from"><strong>Analytics Staff Sees</strong>Scheme adherence: 64%. Right-baseline coverage broken on 7/10 possessions vs. pre-game plan.</div><div class="comm-to"><strong>Halftime Adjustment</strong>"We loaded the paint on our scouting report but they're attacking the baseline angle instead. Switch to ICE on ball screens — take away that angle entirely."</div></div>
+      <div class="comm-card"><div class="comm-from"><strong>Analytics Staff Sees</strong>Drive conv. right baseline: 71% (10 drives, 7 scores). Help rotation: 1.2 dribbles late.</div><div class="comm-to"><strong>Coaching Staff Hears</strong>"The right baseline is our biggest problem. #4 is getting to the rim before help arrives. We need a scheme call, not a motivation speech."</div></div>
+      <div class="comm-card"><div class="comm-from"><strong>Analytics Staff Sees</strong>Close-out grade #3 Marcus: 2.1 avg on 12 C&S possessions. Close-out distance at shot: 4.2 feet.</div><div class="comm-to"><strong>Player Hears</strong>"Marcus, you're giving up the corner 3 on rotation. One step in, then back. Your grade is 2.1. The data shows you're going too far into the paint before recovering."</div></div>
+      <div class="comm-card"><div class="comm-from"><strong>Analytics Staff Sees</strong>N-gram: pass→drive→kick runs 34% of possessions. Stop rate: 31%. 22 occurrences, statistically dominant.</div><div class="comm-to"><strong>Coaching Staff Hears</strong>"This is their primary set. We're stopping it under a third of the time. It needs a specific defensive call with a name your players recognize."</div></div>
+      <div class="comm-card"><div class="comm-from"><strong>Analytics Staff Sees</strong>Scheme adherence: 64%. Right-baseline coverage broken on 7/10 possessions vs. pre-game plan.</div><div class="comm-to"><strong>Halftime Adjustment</strong>"We loaded the paint on our scouting report but they're attacking the baseline angle instead. Switch to ICE on ball screens. Take away that angle entirely."</div></div>
     </div>
   </section>
 </div>
@@ -1304,7 +1304,7 @@
   <section>
     <span class="section-tag-dark">Built for the Sideline</span>
     <h2 class="dark">No video. No calibration. No delay.</h2>
-    <p class="section-sub-dark">Coach's Analytics captures every possession with a single tap on a tablet. Data is available instantly — not after the game.</p>
+    <p class="section-sub-dark">Coach's Analytics captures every possession with a single tap on a tablet. Data is available instantly, not after the game.</p>
     <div class="spec-grid">
       <div class="spec-item"><div class="spec-label">Platform</div><div class="spec-val">Windows · Tablet-first</div></div>
       <div class="spec-item"><div class="spec-label">Input</div><div class="spec-val">Touch / tap</div></div>
@@ -1326,12 +1326,12 @@
 <script>
 // ── COURT ZONE CLICK ──
 const zoneData = {
-  'paint': { zone:'PAINT / KEY', title:'Paint Touches & Drive Endpoints', stat1:'48%', meta1:'conversion when ball enters paint', stat2:'2.3', meta2:'avg passes after PT until made shot', cue:'"Ball hits the paint — corners: one step in NOW, not on the catch. You have a half-second before the kick-out."' },
-  '3pt-top': { zone:'ABOVE BREAK / TOP OF KEY', title:'Top-of-Key Drives & Shots', stat1:'29%', meta1:'drive conversion from top of key', stat2:'27%', meta2:'C&S 3PT% from above the break', cue:'"Top drives are well-defended at 29%. Don\'t adjust here — funnel them toward the key."' },
+  'paint': { zone:'PAINT / KEY', title:'Paint Touches & Drive Endpoints', stat1:'48%', meta1:'conversion when ball enters paint', stat2:'2.3', meta2:'avg passes after PT until made shot', cue:'"Ball hits the paint, corners: one step in NOW, not on the catch. You have a half-second before the kick-out."' },
+  '3pt-top': { zone:'ABOVE BREAK / TOP OF KEY', title:'Top-of-Key Drives & Shots', stat1:'29%', meta1:'drive conversion from top of key', stat2:'27%', meta2:'C&S 3PT% from above the break', cue:'"Top drives are well-defended at 29%. Don\'t adjust here. Funnel them toward the key."' },
   '3pt-left': { zone:'LEFT WING', title:'Left Wing Pass Flow & Shots', stat1:'64%', meta1:'C&S 3PT% from left corner', stat2:'54%', meta2:'drive conversion from left wing', cue:'"Left corner is a shooting zone at 64%. Do NOT leave your man on any drive unless it\'s a clear layup."' },
   '3pt-right': { zone:'RIGHT WING', title:'Right Wing Drives & Kick-Outs', stat1:'71%', meta1:'drive conversion from right baseline', stat2:'54%', meta2:'C&S 3PT% from right corner', cue:'"Right baseline is hemorrhaging at 71%. Weak-side center: anchor the lane line before the drive arrives."' },
-  'mid-left': { zone:'LEFT CORNER / BASELINE', title:'Left Baseline Drive Origin', stat1:'38%', meta1:'drive conversion — left baseline', stat2:'8', meta2:'drives logged from this zone', cue:'"Left baseline is defended well at 38%. Your help rotation here is working — keep the same coverage."' },
-  'mid-right': { zone:'RIGHT CORNER / BASELINE', title:'Right Baseline Pressure Zone', stat1:'71%', meta1:'drive conversion — right baseline', stat2:'10', meta2:'drives logged from this zone', cue:'"10 drives from here, 7 scored. Load the weak side earlier — make the drop before the dribble, not after."' }
+  'mid-left': { zone:'LEFT CORNER / BASELINE', title:'Left Baseline Drive Origin', stat1:'38%', meta1:'drive conversion, left baseline', stat2:'8', meta2:'drives logged from this zone', cue:'"Left baseline is defended well at 38%. Your help rotation here is working. Keep the same coverage."' },
+  'mid-right': { zone:'RIGHT CORNER / BASELINE', title:'Right Baseline Pressure Zone', stat1:'71%', meta1:'drive conversion, right baseline', stat2:'10', meta2:'drives logged from this zone', cue:'"10 drives from here, 7 scored. Load the weak side earlier. Make the drop before the dribble, not after."' }
 };
 let selectedZone=null;
 document.querySelectorAll('.court-zone').forEach(el=>{
@@ -1349,15 +1349,15 @@ document.querySelectorAll('.court-zone').forEach(el=>{
 
 // ── SEQUENCE PLAYBACK ──
 const steps=[
-  {step:0,stats:{lv0:'1',lstat0:true},insight:'Pass logged to right wing — pass flow arc added. Feeds the pass frequency histogram and origin-zone tracking.'},
+  {step:0,stats:{lv0:'1',lstat0:true},insight:'Pass logged to right wing. Pass flow arc added. Feeds the pass frequency histogram and origin-zone tracking.'},
   {step:1,stats:{lv1:'1',lstat1:true},insight:'Drive detected: right wing into paint, 3.2s duration. Bucket: 2–5s. Origin zone: right wing. Drive conversion counter triggered.'},
   {step:2,stats:{lv2:'1',lstat2:true},insight:'Paint touch confirmed. Conversion tracking starts. This possession will count toward PT conversion rate and avg-passes metric.'},
-  {step:3,stats:{lv3:'2',lstat3:true},insight:'Two passes after the paint touch before the shot — adds to "Avg passes after PT→shot." Kick-out pass flow arc logged.'},
+  {step:3,stats:{lv3:'2',lstat3:true},insight:'Two passes after the paint touch before the shot, adds to "Avg passes after PT→shot." Kick-out pass flow arc logged.'},
   {step:4,stats:{lv4:'1',lstat4:true},insight:'Catch-and-shoot 3PT from left corner. Defender close-out grade logged. Shot feeds heat-map, C&S split, and shot zone analysis.'},
   {step:5,stats:{lv5:'3',lstat5:true},insight:'Made 3. Sequence ends. Drive conv: +1 score (71%). PT conv: +1. Close-out grade posted to #3 Marcus\'s profile. DE updated.'}
 ];
 let seqRunning=false,seqTimer=null,currentStep=-1;
-function resetSeq(){if(seqTimer)clearTimeout(seqTimer);seqRunning=false;currentStep=-1;document.getElementById('playBtn').textContent='Play';for(let i=0;i<=5;i++){const el=document.getElementById('step'+i);if(el){el.classList.remove('active','done');}}['lv0','lv1','lv2','lv3','lv4','lv5'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent='—';});['lstat0','lstat1','lstat2','lstat3','lstat4','lstat5'].forEach(id=>{const el=document.getElementById(id);if(el)el.classList.remove('updated');});document.getElementById('seqInsight').textContent='Press Play to watch the possession unfold and see how each tap updates your defensive analytics in real time.';}
+function resetSeq(){if(seqTimer)clearTimeout(seqTimer);seqRunning=false;currentStep=-1;document.getElementById('playBtn').textContent='Play';for(let i=0;i<=5;i++){const el=document.getElementById('step'+i);if(el){el.classList.remove('active','done');}}['lv0','lv1','lv2','lv3','lv4','lv5'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent='-';});['lstat0','lstat1','lstat2','lstat3','lstat4','lstat5'].forEach(id=>{const el=document.getElementById(id);if(el)el.classList.remove('updated');});document.getElementById('seqInsight').textContent='Press Play to watch the possession unfold and see how each tap updates your defensive analytics in real time.';}
 function playSeq(){if(seqRunning)return;seqRunning=true;document.getElementById('playBtn').textContent='Playing...';advanceStep();}
 function advanceStep(){currentStep++;if(currentStep>5){seqRunning=false;document.getElementById('playBtn').textContent='Done';return;}const s=steps[currentStep];if(currentStep>0){const prev=document.getElementById('step'+(currentStep-1));if(prev){prev.classList.remove('active');prev.classList.add('done');}}document.getElementById('step'+currentStep)?.classList.add('active');Object.entries(s.stats).forEach(([k,v])=>{if(k.startsWith('lv')){const el=document.getElementById(k);if(el)el.textContent=v;}else{const el=document.getElementById(k);if(el){el.classList.add('updated');setTimeout(()=>el.classList.remove('updated'),1200);}}});document.getElementById('seqInsight').textContent=s.insight;seqTimer=setTimeout(advanceStep,1700);}
 
@@ -1369,20 +1369,20 @@ function togglePlayer(card){const was=card.classList.contains('expanded');docume
 
 // ── CLOSE-OUT GRADE ──
 const gradeInfo={
-  1:{color:'#dc2626',title:'Grade 1 — No Contest',desc:'The defender made no meaningful effort to close out. The shooter had a completely open look with no pressure on the ball. This is the most costly grade — it indicates the defender either lost their assignment or chose not to sprint.',cue:'"You gave up a free look. On kick-outs you have to be moving before the pass gets there. Watch your feet on the rotation."'},
-  2:{color:'#ea580c',title:'Grade 2 — Late Close-Out',desc:'The defender arrived after the shot was released or just as it left the shooter\'s hands. They were moving in the right direction but did not arrive in time to affect the shot. Often caused by over-help on drives.',cue:'"You were late. You left the paint too slowly on the kick-out — your man got comfortable. Start your close-out two counts earlier."'},
-  3:{color:'#d97706',title:'Grade 3 — Adequate',desc:'The defender contested but was flat-footed, off-balance, or arrived from the wrong angle. The shot was pressured but not significantly altered. Improvement is achievable with better footwork and read timing.',cue:'"You got there but you were flat-footed. Contest with your feet under you. Run at them, not past them — stay vertical."'},
-  4:{color:'#16a34a',title:'Grade 4 — Strong Contest',desc:'The defender closed out with good timing, had a hand up, and recovered after the contest. The shooter was forced to adjust their shooting motion. This is the standard elite defenders hit consistently.',cue:'"That\'s a good close-out. You were in good position. Keep the same timing — don\'t change anything that\'s working."'},
-  5:{color:'#15803d',title:'Grade 5 — Elite Execution',desc:'The defender anticipated the kick-out, arrived with their hand high before the shooter was set, and either forced a difficult shot or drew a foul. This grade directly prevents scores — it is the highest individual defensive execution.',cue:'"Elite close-out. You read the kick-out early, your hand was up before he caught it. That\'s exactly the standard we want."'}
+  1:{color:'#dc2626',title:'Grade 1: No Contest',desc:'The defender made no meaningful effort to close out. The shooter had a completely open look with no pressure on the ball. This is the most costly grade. It indicates the defender either lost their assignment or chose not to sprint.',cue:'"You gave up a free look. On kick-outs you have to be moving before the pass gets there. Watch your feet on the rotation."'},
+  2:{color:'#ea580c',title:'Grade 2: Late Close-Out',desc:'The defender arrived after the shot was released or just as it left the shooter\'s hands. They were moving in the right direction but did not arrive in time to affect the shot. Often caused by over-help on drives.',cue:'"You were late. You left the paint too slowly on the kick-out. Your man got comfortable. Start your close-out two counts earlier."'},
+  3:{color:'#d97706',title:'Grade 3: Adequate',desc:'The defender contested but was flat-footed, off-balance, or arrived from the wrong angle. The shot was pressured but not significantly altered. Improvement is achievable with better footwork and read timing.',cue:'"You got there but you were flat-footed. Contest with your feet under you. Run at them, not past them. Stay vertical."'},
+  4:{color:'#16a34a',title:'Grade 4: Strong Contest',desc:'The defender closed out with good timing, had a hand up, and recovered after the contest. The shooter was forced to adjust their shooting motion. This is the standard elite defenders hit consistently.',cue:'"That\'s a good close-out. You were in good position. Keep the same timing. Don\'t change anything that\'s working."'},
+  5:{color:'#15803d',title:'Grade 5: Elite Execution',desc:'The defender anticipated the kick-out, arrived with their hand high before the shooter was set, and either forced a difficult shot or drew a foul. This grade directly prevents scores. It is the highest individual defensive execution.',cue:'"Elite close-out. You read the kick-out early, your hand was up before he caught it. That\'s exactly the standard we want."'}
 };
 function showGrade(n){const d=gradeInfo[n];const el=document.getElementById('gradeDetail');el.innerHTML=`<div class="grade-detail-label" style="color:${d.color}">GRADE ${n} CLOSE-OUT</div><div class="grade-detail-title">${d.title}</div><div class="grade-detail-desc">${d.desc}</div><div class="grade-cue-light"><strong>TELL THE PLAYER</strong>${d.cue}</div>`;}
 
 // ── OPPONENT PATTERN SELECT ──
 const patternInfo={
   'pass-drive-kick':{title:'pass → drive → kick → shot',reps:22,stop:31,q:{1:4,2:6,3:8,4:4},insight:'Their primary set. A 31% stop rate on 34% of possessions is a scheme failure. The weak-side corner defender is going too deep on help. Need a specific call.'},
-  'drive-shot':{title:'drive → shot',reps:14,stop:44,q:{1:2,2:4,3:5,4:3},insight:'Straight drive-and-finish. 44% stop — getting better. The issue is drop coverage depth. Anchoring earlier reduces this to 30% or below.'},
-  'pass-pass-shot':{title:'pass → pass → shot',reps:12,stop:67,q:{1:3,2:3,3:4,4:2},insight:'Their ball-movement set is being defended well. 67% stop — when they have to make two passes, your communication kicks in. Force them into this pattern.'},
-  'drive-pass-shot':{title:'drive → pass → shot',reps:10,stop:29,q:{1:2,2:3,3:3,4:2},insight:'Drive-and-kick is the most dangerous. 29% stop — the kick-out receiver is too open. Corners must be at the shooter\'s hip by the time the drive contacts the paint.'}
+  'drive-shot':{title:'drive → shot',reps:14,stop:44,q:{1:2,2:4,3:5,4:3},insight:'Straight drive-and-finish. 44% stop. Getting better. The issue is drop coverage depth. Anchoring earlier reduces this to 30% or below.'},
+  'pass-pass-shot':{title:'pass → pass → shot',reps:12,stop:67,q:{1:3,2:3,3:4,4:2},insight:'Their ball-movement set is being defended well. 67% stop. When they have to make two passes, your communication kicks in. Force them into this pattern.'},
+  'drive-pass-shot':{title:'drive → pass → shot',reps:10,stop:29,q:{1:2,2:3,3:3,4:2},insight:'Drive-and-kick is the most dangerous. 29% stop. The kick-out receiver is too open. Corners must be at the shooter\'s hip by the time the drive contacts the paint.'}
 };
 function selectPattern(el,key){document.querySelectorAll('.opp-pattern').forEach(p=>p.classList.remove('recognized'));el.classList.add('recognized');const d=patternInfo[key];const detail=document.getElementById('patternDetail');detail.innerHTML=`<div style="font-size:11px;color:var(--t-dark3);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">PATTERN DETAIL</div><div style="font-family:monospace;font-size:18px;font-weight:800;color:white;margin-bottom:14px">${d.title}</div><div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap"><div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:12px 16px;flex:1;min-width:80px"><div style="font-size:24px;font-weight:800;color:white">${d.reps}</div><div style="font-size:11px;color:var(--t-dark2)">Total reps</div></div><div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:12px 16px;flex:1;min-width:80px"><div style="font-size:24px;font-weight:800;color:${d.stop<40?'#f87171':d.stop<55?'#fbbf24':'#4ade80'}">${d.stop}%</div><div style="font-size:11px;color:var(--t-dark2)">Stop rate</div></div></div><div style="font-size:12px;color:var(--t-dark3);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">BY QUARTER</div><div style="display:flex;gap:8px;margin-bottom:16px">${[1,2,3,4].map(q=>`<div style="flex:1;text-align:center;background:rgba(255,255,255,0.05);border-radius:6px;padding:8px"><div style="font-size:16px;font-weight:800;color:white">${d.q[q]}</div><div style="font-size:10px;color:var(--t-dark3)">Q${q}</div></div>`).join('')}</div><div style="padding:12px 14px;background:rgba(255,255,255,0.06);border-left:3px solid rgba(255,255,255,0.3);border-radius:0 8px 8px 0;font-size:13px;color:var(--t-dark);line-height:1.6">${d.insight}</div>`;}
 function gradeExec(e,btn,grade){e.stopPropagation();const parent=btn.closest('.opp-grade-input');parent.querySelectorAll('.grade-btn').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');}
